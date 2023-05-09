@@ -1,0 +1,20 @@
+npm init -y
+criar arquivo index.js
+npm install express -save
+npm install jest
+npm install jest-junit
+ajusta o package json para refletir o jest e a saida do arquivo
+retira "echo \"Error: no test specified\" && exit 1"
+coloca "jest --ci --reportes=default --reporters=jest-junit"
+ajusta os parametros do jest-unit
+"jest-junit": {
+    "outputDirectory": "reports",
+    "outputName": "jest-junit.xml",
+    "ancestorSeparator": ">",
+    "uniqueOutputName": "false",
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}"
+    }
+
+obs para criar o diretorio reports precisa de autorização no yaml do git actions.
