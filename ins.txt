@@ -18,3 +18,6 @@ ajusta os parametros do jest-unit
     }
 
 obs para criar o diretorio reports precisa de autorização no yaml do git actions.
+
+COLOCANDO O TOKEN NO PARAMETROS DO GIT
+git remote set-url origin https://sergiolmm-pucc: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@github.com/sergiolmm-pucc/GCSProjeto
