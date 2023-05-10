@@ -28,4 +28,10 @@ jobs:
             name: JEST tests
             path: reports/jest-*.xml
             reporter: jest-junit
-            
+         
+         - name: Enviando ao Glich
+           uses: kanadgupta/glitch-sync@main
+           with:
+              auth-token: '${{ secrets.authToken }}'
+              project-id: '${{ secrets.projectId }}'
+              #path: 'dist' # optional  

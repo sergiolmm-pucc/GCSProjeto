@@ -21,3 +21,12 @@ obs para criar o diretorio reports precisa de autorização no yaml do git actio
 
 COLOCANDO O TOKEN NO PARAMETROS DO GIT
 git remote set-url origin https://sergiolmm-pucc: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@github.com/sergiolmm-pucc/GCSProjeto
+
+
+authorization: a41995bc-f504-4690-8ef9-b368e9f6d99e
+
+Solicitar 
+URL: https://api.glitch.com/project/githubImport?
+projectId=fd6ba0e8-9a9e-42d5-8203-397a0f3f3a6e
+&
+repo=sergiolmm-pucc%2FGCSProjeto

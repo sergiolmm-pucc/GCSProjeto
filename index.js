@@ -8,7 +8,7 @@ server.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 
 server.get('/',function(req,res){
-    res.send("Site de Tecnologia");
+    res.send("Site de Tecnologia1");
 });
 
 server.get('/ht',(req, res) => res.sendFile(INDEX, { root: __dirname }));
