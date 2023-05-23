@@ -10,7 +10,7 @@ jobs:
       
       strategy:
        matrix:
-        node-version: [18.x]
+        node-version: [19.x]
         
       steps:
          - uses: actions/checkout@v3
@@ -46,10 +46,10 @@ jobs:
         uses: Xotabu4/selenoid-github-action@v2
 
       - uses: actions/checkout@v3
-      - name: Use node.js 18.x
+      - name: Use node.js 19.x
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 19.x
 
       - run: npm ci
       - name: Run end to end tests
