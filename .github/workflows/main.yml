@@ -36,3 +36,28 @@ jobs:
               auth-token: '${{ secrets.authToken }}'
               project-id: '${{ secrets.projectId }}'
               #path: 'dist' # optional  
+
+  tests:
+    needs: Projeto_Final
+    runs-on: ubuntu-latest
+    name: Run Selenium Tests on docker
+    steps:
+      - name: Start selenoid
+        uses: Xotabu4/selenoid-github-action@v2
+
+      - uses: actions/checkout@v3
+      - name: Use node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - run: npm ci
+      - name: Run end to end tests
+        run: npm run test1
+        
+      - name: fotos da tela
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-macos
+          # Path to the release files          
+          path: *.png 
