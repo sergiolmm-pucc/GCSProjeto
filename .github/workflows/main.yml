@@ -64,4 +64,4 @@ jobs:
         with:
           name: release-macos
           # Path to the release files          
-          path: /*.png
+          path: /home/runner/work/GCSProjeto/GCSProjeto/*.png
