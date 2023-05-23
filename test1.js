@@ -3,7 +3,7 @@
 const chrome = require('selenium-webdriver/chrome');
 const webdriver = require('selenium-webdriver');
 //import the following classes from Selenium
-const {Builder, By, Key, until} = require('selenium-webdriver');
+const {Builder, Browser, By, Key, until} = require('selenium-webdriver');
 const {NoSuchElementError} = require('selenium-webdriver/lib/error');
 
 
