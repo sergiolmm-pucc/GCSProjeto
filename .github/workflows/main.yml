@@ -28,7 +28,8 @@ jobs:
             name: JEST tests
             path: reports/jest-*.xml
             reporter: jest-junit
-         
+            
+         # https://geode-ink-activity.glitch.me/
          - name: Enviando ao Glich
            uses: kanadgupta/glitch-sync@main
            with:
