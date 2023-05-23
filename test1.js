@@ -5,7 +5,7 @@ const webdriver = require('selenium-webdriver');
 //import the following classes from Selenium
 const {Builder, Browser, By, Key, until} = require('selenium-webdriver');
 const {NoSuchElementError} = require('selenium-webdriver/lib/error');
-
+const screen = { width: 1024, height: 720};
 
 
 async function example() {
