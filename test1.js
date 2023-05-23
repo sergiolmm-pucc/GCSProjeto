@@ -1,6 +1,7 @@
 //import chromedriver in order for Selenium to open a Chrome browser by itself
-require("chromedriver"); 
-
+//require("chromedriver"); 
+const chrome = require('selenium-webdriver/chrome');
+const webdriver = require('selenium-webdriver');
 //import the following classes from Selenium
 const {Builder, By, Key, until} = require('selenium-webdriver');
 const {NoSuchElementError} = require('selenium-webdriver/lib/error');
@@ -9,9 +10,20 @@ const {NoSuchElementError} = require('selenium-webdriver/lib/error');
 
 async function example() {
     //open Chrome browser
+    //let driver = await new Builder()
+    //    .forBrowser('chrome')
+    //    .build();
+     console.log("Iniciando");
+
+    var capabilities = webdriver.Capabilities.chrome();
+    capabilities.set('chromeOptions', {'args': ['--no-sandbox']});
+
     let driver = await new Builder()
-        .forBrowser('chrome')
-        .build();
+        .forBrowser(Browser.CHROME)
+        .withCapabilities(capabilities)
+        .setChromeOptions( new chrome.Options().headless().windowSize(screen))
+        .build()
+    console.log("driver criado");
 
     //go to Google's website
     await driver.get('https://geode-ink-activity.glitch.me/ht');
