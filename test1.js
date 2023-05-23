@@ -37,23 +37,19 @@ async function example() {
 
     driver.takeScreenshot().then(
         function(image, err) {
-            require('fs').writeFile('out.png', image, 'base64', function(err) {
-                console.log(err);
-            });
-        }
-    );
-    driver.takeScreenshot().then(
-        function(image, err) {
             require('fs').writeFile('inicio.png', image, 'base64', function(err) {
                 console.log(err);
             });
         }
     );
 
-
     //name locator for google search button
-    let searchIcon = driver.findElement(By.name("btn"));
+    try{    
+    let searchIcon = driver.findElement(By.id("btn"));
     searchIcon.click();
+    }catch(error){
+    }
+        
    // Wait for 5 secs to let the dynamic content to load
    await driver.sleep(5000);
    
