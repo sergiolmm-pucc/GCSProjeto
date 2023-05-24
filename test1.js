@@ -40,7 +40,7 @@ async function example() {
     driver.takeScreenshot().then(
         function(image, err) {
             require('fs').writeFile('inicio.png', image, 'base64', function(err) {
-                console.log(err);
+                console.log("erro"+ err);
             });
         }
     );
@@ -50,6 +50,7 @@ async function example() {
     let searchIcon = driver.findElement(By.id("btn"));
     searchIcon.click();
     }catch(error){
+        console.log("erro no botao");
     }
         
    // Wait for 5 secs to let the dynamic content to load
