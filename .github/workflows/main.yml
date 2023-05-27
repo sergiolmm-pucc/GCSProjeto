@@ -65,3 +65,17 @@ jobs:
           name: release-macos
           # Path to the release files          
           path: /home/runner/work/GCSProjeto/GCSProjeto/*.png
+   
+      - name: Run end to end tests
+        run: npm run test1
+      - name: diretorio
+        run: pwd
+      - name: lista  
+        run: ls -la
+        
+      - name: fotos da tela
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-macos1
+          # Path to the release files          
+          path: /home/runner/work/GCSProjeto/GCSProjeto/*.png
