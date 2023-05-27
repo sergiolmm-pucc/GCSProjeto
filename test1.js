@@ -25,7 +25,7 @@ async function example() {
         .build()
     console.log("driver criado");
 
-    await driver.sleep(20000);
+    await driver.sleep(35000);
     
     //go to Google's website
     await driver.get('https://geode-ink-activity.glitch.me/ht');
